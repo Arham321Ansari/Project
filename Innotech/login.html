@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+    <link rel="stylesheet" href="log.css">
+    <script src="https://kit.fontawesome.com/61aef8c976.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="./images/Blood_Donation_Logo-removebg-preview.png" alt="logo" height="160rem" width="200rem">
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="form-box">
+            <h1 id="title">Sign-up</h1>
+            <form action="">
+                <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="name">
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" placeholder="E-mail">
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="frgt">
+                    <p class="frgt2">Forgot Password?<a href="#">Click here</a></p>
+                </div>
+                <div class="btn">
+                    <button class="btn1" id="signupbtn">Sign-up</button>
+                    <button class="btn2" id="signinbtn">Sign-in</button>
+                </div>
+            </div>
+            </form>
+
+        </div>
+        
+    </main>
+
+    <script>
+        let signUpBtn=document.getElementById("signupbtn");
+        let signInBtn=document.getElementById("signinbtn");
+        let nameField=document.getElementById("nameField");
+        let title=document.getElementById("title");
+        let forget=document.getElementsByClassName("frgt");
+       
+
+        signInBtn.onclick=function(){
+            nameField.style.maxHeight="0";
+            title.innerHTML="Sign-In"
+            signUpBtn.classList.add("btn2")
+            signInBtn.classList.remove("btn2")
+        
+
+        }
+        signUpBtn.onclick=function(){
+            nameField.style.maxHeight="60px";
+            title.innerHTML="Sign-In"
+            signInBtn.classList.add("btn2");
+            signUpBtn.classList.remove("btn2");
+            
+        }
+
+    </script>
+</body>
+</html>
